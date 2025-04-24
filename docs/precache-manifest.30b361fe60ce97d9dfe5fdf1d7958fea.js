@@ -1,19 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5896ed49ebb636c09256",
-    "url": "/css/app.40a96688.css"
+    "revision": "cffe22c869b0433de464",
+    "url": "/css/app.18c4191c.css"
   },
   {
-    "revision": "17e5de3dd7bcdcc296d1",
-    "url": "/css/chunk-vendors.0a24d4cc.css"
+    "revision": "c10e8645d51955c466b7",
+    "url": "/css/chunk-vendors.e5d5ea0d.css"
   },
   {
     "revision": "d1fbd9c6a301240f57386e70fb8a2276",
     "url": "/favicon.ico"
-  },
-  {
-    "revision": "f644aecd19899fd957494e97741fafbc",
-    "url": "/img/credits-civ.f644aecd.png"
   },
   {
     "revision": "0ee2ad341ab86050cb469c4a3483f0c6",
@@ -88,12 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "b34eb720fbbfcbd1fbd9f49ded3fa25a",
-    "url": "/img/mural1.b34eb720.png"
-  },
-  {
-    "revision": "5e22429fb84b168664dd1d035c1ac9d3",
-    "url": "/img/mural2.5e22429f.png"
+    "revision": "fb94ffc451c3eff1b08f67b848c118af",
+    "url": "/img/mural1.fb94ffc4.png"
   },
   {
     "revision": "31e771a23025b6af19a1ff33d7cda371",
@@ -116,16 +108,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/scroll-light-2.e9c4958c.png"
   },
   {
-    "revision": "678b746fffa43f943a52b116d8db8785",
+    "revision": "2dda863fe54631b719a7c1f81ccdaeb0",
     "url": "/index.html"
   },
   {
-    "revision": "5896ed49ebb636c09256",
-    "url": "/js/app.81bde497.js"
+    "revision": "cffe22c869b0433de464",
+    "url": "/js/app.603d8c92.js"
   },
   {
-    "revision": "17e5de3dd7bcdcc296d1",
-    "url": "/js/chunk-vendors.22729b71.js"
+    "revision": "c10e8645d51955c466b7",
+    "url": "/js/chunk-vendors.f9ade96e.js"
   },
   {
     "revision": "6079b1616da5984a19f2c59b3ba2f75d",
