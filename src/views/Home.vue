@@ -40,10 +40,6 @@
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Mural</span>
             </v-btn>
-            <v-btn text class="brown--text darken-3" @click="scrollTo('#collage')">
-              <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
-              <span class="pl-2 text-h6">Collage</span>
-            </v-btn>
             <v-btn text class="brown--text darken-3" @click="scrollTo('#messages')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Messages</span>
@@ -74,25 +70,6 @@
           </v-col>
         </v-row>
 
-        <!-- COLLAGE -->
-        <v-row no-gutters class="mt-8 mb-2" id="collage">
-          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
-            ART COLLAGE
-            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row no-gutters class="mb-8">
-          <v-col class="collage" sm="10" offset-sm="1">
-            <div class="collage-container mx-auto">
-              <inner-image-zoom
-                :src="CollageImg"
-                :zoomSrc="CollageImg" />
-            </div>
-          </v-col>
-        </v-row>
-
         <!-- MESSAGES -->
         <v-row no-gutters class="mt-8 mb-4" id="messages">
           <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
@@ -105,21 +82,6 @@
         <v-row no-gutters>
           <v-col class="cards px-4">
             <div v-masonry transition-duration="0.3s" item-selector=".card">
-              <div class="card card-dark pt-8">
-                <div class="binder"></div>
-                <div class="card-name text-h4 blue--text text-center mb-4">Yosetti Board</div>
-                <div class="card-text text-h6 px-8 black--text pb-4 text-center">
-                  More messages from the members of the community were collected,
-                  and can be found over at the Yosetti message board:
-                  <div class="text--center mt-4 mb-4">
-                    <a class="card-name blue--text text-decoration-none text-h5"
-                      href="https://yosetti.com/mainyosegakis/gift_send_web?id=1989690&sc=VEhZ4"
-                      target="_blank">
-                      OPEN LINK
-                    </a>
-                  </div>
-                </div>
-              </div>
               <div v-masonry-tile class="card pt-6" v-for="(item, ix) in cards" :key="`card-${ix}`">
                 <div class="binder"></div>
                 <div class="wings"><img src="../assets/feather.png" /></div>
@@ -146,101 +108,6 @@
             <v-card  elevation="1" shaped>
               <Tweet :id="item"></Tweet>
             </v-card>
-          </v-col>
-        </v-row>
-
-        <!-- CREDITS -->
-        <v-row no-gutters class="mt-8 mb-8">
-          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
-            CREDITS
-            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row class="mb-8 px-16">
-          <v-col cols="12" sm="6" lg="4">
-            <ul>
-              <li class="pb-4">
-                <strong class="mr-2">jetrico</strong>
-                <v-icon>mdi-twitter</v-icon>
-                <a target="_blank" href="https://twitter.com/jetri_co">@jetri_co</a>
-                <ul>
-                  <li>Website development, graphics</li>
-                  <li>Header Artwork</li>
-                  <li>Backend automations</li>
-                </ul>
-              </li>
-              <li class="pb-4">
-                <strong class="mr-2">Mumei Civilization Discord</strong>
-                <ul>
-                  <li>
-                    <v-icon class="mr-2">mdi-discord</v-icon>
-                    <a href="https://discord.gg/mumei-civilization" target="_blank">Server Invite</a>
-                  </li>
-                  <li>Event organization</li>
-                  <li>Mural, the community drawing</li>
-                  <li>Message collection / Tweet hashtag</li>
-                  <li>Community announcements, etc</li>
-                </ul>
-              </li>
-              <li class="pb-4">
-                <strong class="mr-2">Mumei Sanctuary Discord</strong>
-                <ul>
-                  <li>
-                    <v-icon class="mr-2">mdi-discord</v-icon>
-                    <a href="https://discord.gg/hoomanity" target="_blank">Server Invite</a>
-                  </li>
-                  <li>Art collage</li>
-                  <li>Yosetti message board</li>
-                  <li>Community announcements, etc</li>
-                </ul>
-              </li>
-              <!-- <li class="pb-4">
-                <strong class="mr-2">水卯</strong>
-                <v-icon>mdi-twitter</v-icon>
-                <a target="_blank" href="https://twitter.com/Minau_">@Minau_</a>
-                <ul>
-                  <li>Mumei Sanctuary Discord logo</li>
-                </ul>
-              </li> -->
-              <li class="pb-4">
-                <strong class="mr-2">galex</strong>
-                <!-- <v-icon>mdi-twitter</v-icon>
-                <a target="_blank" href="https://twitter.com/Minau_">@Minau_</a> -->
-                <ul>
-                  <li>Message card graphic</li>
-                </ul>
-              </li>
-            </ul>
-          </v-col>
-          <v-col cols="12" sm="6" lg="8">
-            <v-container>
-              <v-row>
-                <v-col cols="12" lg="6" class="text-center">
-                  <a href="https://twitter.com/MumeiCiv/status/1477299356986494979" target="_blank">
-                    <v-img
-                      lazy-src="../assets/credits-civ.png"
-                      src="../assets/credits-civ.png"
-                    ></v-img>
-                  </a>
-                  <h4 class="text-center ma-0 pa-0">Mumei Civilization Discord</h4>
-                </v-col>
-                <v-col cols="12" lg="6" class="text-center pt-4">
-                  <a href="https://twitter.com/MumeiSanctuary/status/1477349346219905026" target="_blank">
-                    <img :src="CollageImg"
-                      style="max-height:200px;" class="mb-4" />
-                  </a>
-                  <h4 class="text-center">Mumei Sanctuary Discord Collage Artists</h4>
-                  <p>
-                    Tex, kimfully, @alnomnomnom, HoloArtemis, Erich, Xander, fireofhell06,
-                    @Sayo0692, WildestDuck, DedeHeav, Elious, Lingyi2400, Nanashi_Panda,
-                    @outhaleart, Sock, PotatoIsNotCute, rafidfire, @rem26_art,
-                    @HoneyStarDraws, @TheAmazingPoyo
-                  </p>
-                </v-col>
-              </v-row>
-            </v-container>
           </v-col>
         </v-row>
       </v-container>
