@@ -24,13 +24,8 @@
       <v-container class="content-grid pt-8">
         <div class="ribbon ribbon-left"></div>
         <div class="ribbon ribbon-right"></div>
-        <p class="text-center text-h6 mb-2">
-          Congratulations to
-          <a href="https://www.youtube.com/channel/UC3n5uGu18FoCy23ggWWp8tA"
-            target="_blank" class="blue--text text-decoration-none">
-            Nanashi Mumei
-          </a>
-          for reaching 500,000 subscribers on YouTube!
+        <p class="text-center text-h4 mb-2">
+          Farewell, Nanashi Mumei
         </p>
 
         <!-- NAVIGATION -->
@@ -122,15 +117,13 @@ import { Tweet } from 'vue-tweet-embed';
 import twemoji from 'twemoji';
 import backupData from '@/data/data.json';
 import CanvasImg from '@/assets/mural1.png';
-import CollageImg from '@/assets/mural2.png';
 
 export default {
   data: () => ({
-    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei500k.json',
+    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeifarewell.json',
     cards: [],
     tweets: [],
     CanvasImg,
-    CollageImg,
   }),
   methods: {
     scrollTo(target) {
