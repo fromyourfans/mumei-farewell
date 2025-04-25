@@ -31,9 +31,17 @@
         <!-- NAVIGATION -->
         <v-row no-gutters class="cards px-4 mb-8">
           <v-col class="text-center">
+            <v-btn text class="brown--text darken-3" @click="scrollTo('#covermv')">
+              <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
+              <span class="pl-2 text-h6">Cover MV</span>
+            </v-btn>
             <v-btn text class="brown--text darken-3" @click="scrollTo('#canvas')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Mural</span>
+            </v-btn>
+            <v-btn text class="brown--text darken-3" @click="scrollTo('#flags')">
+              <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
+              <span class="pl-2 text-h6">Flags</span>
             </v-btn>
             <v-btn text class="brown--text darken-3" @click="scrollTo('#messages')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
@@ -43,6 +51,25 @@
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Artworks</span>
             </v-btn>
+            <v-btn text class="brown--text darken-3" @click="scrollTo('#clips')">
+              <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
+              <span class="pl-2 text-h6">Clips</span>
+            </v-btn>
+          </v-col>
+        </v-row>
+
+        <!-- COVER MV -->
+        <v-row no-gutters class="mb-2" id="covermv">
+          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
+            COVER MUSIC VIDEO
+            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters class="mb-8">
+          <v-col class="mural" sm="10" offset-sm="1">
+            1
           </v-col>
         </v-row>
 
@@ -62,6 +89,25 @@
                 :src="CanvasImg"
                 :zoomSrc="CanvasImg" />
             </div>
+          </v-col>
+        </v-row>
+
+        <!-- FLAGS -->
+        <v-row no-gutters class="mt-8 mb-8" id="flags">
+          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
+            FLAGS
+            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row class="px-8">
+          <v-col
+            cols="12" sm="6" lg="4" xl="3"
+            v-for="(item, ix) in flags" :key="`tweet-${ix}`">
+            <v-card  elevation="1" shaped>
+              <Tweet :id="item"></Tweet>
+            </v-card>
           </v-col>
         </v-row>
 
@@ -99,7 +145,26 @@
         <v-row class="px-8">
           <v-col
             cols="12" sm="6" lg="4" xl="3"
-            v-for="(item, ix) in tweets" :key="`tweet-${ix}`">
+            v-for="(item, ix) in fanart" :key="`tweet-${ix}`">
+            <v-card  elevation="1" shaped>
+              <Tweet :id="item"></Tweet>
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- CLIPS -->
+        <v-row no-gutters class="mt-8 mb-8" id="clips">
+          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
+            CLIPS
+            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row class="px-8">
+          <v-col
+            cols="12" sm="6" lg="4" xl="3"
+            v-for="(item, ix) in clips" :key="`tweet-${ix}`">
             <v-card  elevation="1" shaped>
               <Tweet :id="item"></Tweet>
             </v-card>
@@ -122,7 +187,9 @@ export default {
   data: () => ({
     source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeifarewell.json',
     cards: [],
-    tweets: [],
+    flags: [],
+    fanart: [],
+    clips: [],
     CanvasImg,
   }),
   methods: {
@@ -140,7 +207,7 @@ export default {
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : backupData;
       this.cards = Object.values(data.messages).sort((a, b) => a.time - b.time);
-      this.tweets = Object.values(data.tweets).map((tweet) => String(tweet.id));
+      this.fanart = Object.values(data.fanart).map((tweet) => String(tweet.id));
       this.$nextTick(() => {
         twemoji.parse(document.body);
       });
