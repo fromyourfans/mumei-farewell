@@ -10,24 +10,24 @@ module.exports = {
     // HTML Title used for OpenGraph linters (social media links)
     config.plugin('html').tap((args) => {
       // eslint-disable-next-line no-param-reassign
-      args[0].title = 'Nanashi Mumei 500k Subscribers Tribute';
+      args[0].title = 'Farewell, Guardian of Civilization';
       // eslint-disable-next-line no-param-reassign
       args[0].meta = {
-        'og:title': 'Nanashi Mumei 500k Subscribers Tribute',
+        'og:title': 'Farewell, Guardian of Civilization',
         'og:type': 'website',
-        'og:description': 'The community celebrates Nanashi Mumei reaching 500,000 YouTube subscribers.',
-        'og:image': 'https://mumei500k.fromyour.fans/mumei500k.png',
+        'og:description': 'Hoomans wish Nanashi Mumei a future as bright as the smiles she brought us!',
+        'og:image': 'https://mumei500k.fromyour.fans/ogimage.png',
         'twitter:card': 'summary_large_image',
-        'twitter:title': 'Nanashi Mumei 500k Subscribers Tribute',
-        'twitter:description': 'The community celebrates Nanashi Mumei reaching 500,000 YouTube subscribers.',
-        'twitter:image': 'https://mumei500k.fromyour.fans/mumei500k.png',
+        'twitter:title': 'Farewell, Guardian of Civilization',
+        'twitter:description': 'Hoomans wish Nanashi Mumei a future as bright as the smiles she brought us!',
+        'twitter:image': 'https://mumei500k.fromyour.fans/ogimage.png',
       };
       return args;
     });
   },
   pwa: {
-    name: 'mumei500k',
-    assetsVersion: '2022_01_17_10_45',
+    name: 'mumeifarewell',
+    assetsVersion: '2025_04_27_05_49',
     workboxOptions: {
       skipWaiting: true,
       exclude: [
