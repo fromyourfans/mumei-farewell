@@ -186,6 +186,7 @@
 </template>
 
 <script>
+/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import InnerImageZoom from 'vue-inner-image-zoom';
 import twemoji from 'twemoji';
@@ -423,8 +424,7 @@ export default {
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : backupData;
       this.cards = Object.values(data.messages).sort((a, b) => a.time - b.time);
-      // this.artSrc = data.fanart;
-      this.fanart = this.fanart.map((fanart, i) => ({ ...fanart, name: artistNames[fanart.file] }));
+      this.fanart = this.fanart.map((fanart) => ({ ...fanart, name: artistNames[fanart.file] }));
       this.$nextTick(() => {
         twemoji.parse(document.body);
       });
@@ -439,12 +439,12 @@ export default {
 <style lang="scss" scoped>
 .header {
   width:100%;
-  height:200px;
+  height:0px;
   background:linear-gradient(to right, #907D6F 10%, #E9DCCD 40%, #E9DCCD 60%, #907D6F 90%);
   position:relative;
   .headback {
     width:100%;
-    height:200px;
+    height:30px;
     position:absolute;
     z-index:1;
     /*background-image:url("../assets/header.png");*/
@@ -454,7 +454,7 @@ export default {
   }
   .headbg {
     width:100%;
-    height:200px;
+    height:30px;
     position:absolute;
     z-index:2;
     /*background-image:url("../assets/header.png");*/
