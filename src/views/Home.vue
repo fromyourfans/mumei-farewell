@@ -31,10 +31,10 @@
         <!-- NAVIGATION -->
         <v-row no-gutters class="cards px-4 mb-8">
           <v-col class="text-center">
-            <v-btn text class="brown--text darken-3" @click="scrollTo('#covermv')">
+            <!-- <v-btn text class="brown--text darken-3" @click="scrollTo('#covermv')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Cover MV</span>
-            </v-btn>
+            </v-btn> -->
             <v-btn text class="brown--text darken-3" @click="scrollTo('#clips')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Thank You</span>
@@ -59,7 +59,7 @@
         </v-row>
 
         <!-- COVER MV -->
-        <v-row no-gutters class="mb-2" id="covermv">
+        <!-- <v-row no-gutters class="mb-2" id="covermv">
           <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
             COVER MUSIC VIDEO
             <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
@@ -77,7 +77,7 @@
               allowfullscreen>
             </iframe>
           </v-col>
-        </v-row>
+        </v-row> -->
 
         <!-- CLIPS -->
         <v-row no-gutters class="mt-8 mb-8" id="clips">
@@ -177,7 +177,53 @@
                 <div class="card-name text-h6 pr-12">{{item.name}}</div>
                 <div class="card-text text-h6 pr-4 pb-4">{{item.message}}</div>
               </div>
+              <div v-masonry-tile class="card pt-6">
+                <div class="binder"></div>
+                <div class="wings"><img src="../assets/feather.png" /></div>
+                <div class="card-name text-h6 pr-12"></div>
+                <div class="card-text text-h6 pr-4 pb-4"><div style="width:30px; height:400px;">🤎</div></div>
+              </div>
             </div>
+          </v-col>
+        </v-row>
+
+        <!-- CREDITS -->
+        <v-row no-gutters class="mt-8 mb-4" id="messages">
+          <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
+            THE AFTERWORD
+            <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters>
+          <v-col cols="12" sm="12" lg="6" xl="6" class="px-4" style="margin:0px auto;">
+            <p>
+              Oh hi! Mumei, you’ve been a brilliant source of inspiration, joy, and love for Hoomans for the past 3 and a half years, and you always will be. Thanks to you, many of us have been able to spread our wings, so to speak, and grow alongside you on your journey in Hololive. We hope this website and the gifts within can convey to you just how much support and love we’ll always carry for you. Farewells are always difficult, but they’re a part of life’s journey. Even if this is our farewell to you, this means an “Oh hi” to what’s next. And don’t worry, we’ll keep Moomin’ on and being silly for as long as we can until our next journeys too. Fly high Mumei. 🕊️
+            </p>
+            <h3>Farewell Website</h3>
+            <ul>
+              <li><strong>Mumei's Civilization Discord Staff and Members</strong></li>
+              <li><strong>Mumei's Sanctuary Discord Staff and Members</strong></li>
+              <li><strong>jetrico</strong> - Site Project Organiser, Lead Programmer</li>
+              <li><strong>The Gnome’s Prophet</strong> - Site Project Organiser, The Afterword</li>
+            </ul>
+            <h3>A New Start Cover</h3>
+            <ul>
+              <li>Organised by <strong>The Gnome’s Prophet, Hyoweii, Delphin Squared</strong></li>
+              <li>Lead Vocals by <strong>Hyoweii, Stert, Leftovers, Ichiminh</strong></li>
+              <li>Chorus Vocals by <strong>Rentikoy, aphixsky, Corvusfall, Xanrail, Yuuma, HeckinSnek, I Drink Coffee Black, hoi_boi, Jesus Alberto, Mookie, berry, Frisk</strong></li>
+            </ul>
+            <h3>Thank you Mumei Clip Compilation</h3>
+            <ul>
+              <li>Organised by <strong>The Gnome’s Prophet, Arrow the Clipper</strong></li>
+              <li>Edited by <strong>Arrow the Clipper</strong></li>
+              <li>Contributions made by <strong>Hoomans!</strong></li>
+            </ul>
+            <h3>Special Thanks to:</h3>
+            <ul>
+              <li>Staff of Mumei Civilization and Sanctuary discords</li>
+            </ul>
           </v-col>
         </v-row>
       </v-container>
