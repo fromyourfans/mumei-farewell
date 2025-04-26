@@ -16,11 +16,11 @@ module.exports = {
         'og:title': 'Farewell, Guardian of Civilization',
         'og:type': 'website',
         'og:description': 'Hoomans wish Nanashi Mumei a future as bright as the smiles she brought us!',
-        'og:image': 'https://mumei500k.fromyour.fans/ogimage.png',
+        'og:image': 'https://mumei-farewell.fromyour.fans/ogimage.png',
         'twitter:card': 'summary_large_image',
         'twitter:title': 'Farewell, Guardian of Civilization',
         'twitter:description': 'Hoomans wish Nanashi Mumei a future as bright as the smiles she brought us!',
-        'twitter:image': 'https://mumei500k.fromyour.fans/ogimage.png',
+        'twitter:image': 'https://mumei-farewell.fromyour.fans/ogimage.png',
       };
       return args;
     });
