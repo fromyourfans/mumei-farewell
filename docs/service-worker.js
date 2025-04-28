@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ad3391602d60a3fbece2c03eaeba15dc.js"
+  "/precache-manifest.0dab4e7cab3135f481b79a2d447c0236.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tribute-mumei500k"});
