@@ -31,10 +31,10 @@
         <!-- NAVIGATION -->
         <v-row no-gutters class="cards px-4 mb-8">
           <v-col class="text-center">
-            <!-- <v-btn text class="brown--text darken-3" @click="scrollTo('#covermv')">
+            <v-btn text class="brown--text darken-3" @click="scrollTo('#covermv')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Cover MV</span>
-            </v-btn> -->
+            </v-btn>
             <v-btn text class="brown--text darken-3" @click="scrollTo('#clips')">
               <v-avatar left size="34"><img src="../assets/rune2.png" class="navimg"></v-avatar>
               <span class="pl-2 text-h6">Thank You</span>
@@ -59,7 +59,7 @@
         </v-row>
 
         <!-- COVER MV -->
-        <!-- <v-row no-gutters class="mb-2" id="covermv">
+        <v-row no-gutters class="mb-2" id="covermv">
           <v-col class="text-h6 text-center px-2 brown lighten-3 mx-8 rounded-xl">
             COVER MUSIC VIDEO
             <v-btn text class="float-right brown--text darken-3" @click="scrollTo('#header')">
@@ -71,13 +71,13 @@
           <v-col class="text-center" sm="12">
             <iframe title="feature-video"
               width="854" height="480"
-              src="https://www.youtube.com/embed/azay4mebvcs"
+              src="https://www.youtube.com/embed/cmG52wbFRJ4"
               frameborder="0"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
               allowfullscreen>
             </iframe>
           </v-col>
-        </v-row> -->
+        </v-row>
 
         <!-- CLIPS -->
         <v-row no-gutters class="mt-8 mb-8" id="clips">
@@ -211,8 +211,11 @@
             <h3>A New Start Cover</h3>
             <ul>
               <li>Organised by <strong>The Gnome’s Prophet, Hyoweii, Delphin Squared</strong></li>
+              <li>Mixed by <strong>Ankari</strong></li>
+              <li>Edited by <strong>Arrow the Clipper</strong></li>
               <li>Lead Vocals by <strong>Hyoweii, Stert, Leftovers, Ichiminh</strong></li>
               <li>Chorus Vocals by <strong>Rentikoy, aphixsky, Corvusfall, Xanrail, Yuuma, HeckinSnek, I Drink Coffee Black, hoi_boi, Jesus Alberto, Mookie, berry, Frisk</strong></li>
+              <li>MV images provided by <strong>turtleeef, HeckinSnekAlert, NamNguyen098, AlphaCas, MTRY8, Higure, AstraNemuricana, Hyoweii, Sayowl, Cubitos</strong></li>
             </ul>
             <h3>Thank you Mumei Clip Compilation</h3>
             <ul>
